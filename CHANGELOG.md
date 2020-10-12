@@ -1,3 +1,3 @@
-## [0.5.0]
+## [0.5.1]
 
-* Initial commit.
+* Added enumerator extension and Converter class with casting methods inside it.
