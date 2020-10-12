@@ -1,3 +1,3 @@
-## [0.5.4]
+## [0.5.5]
 
-* Bug fixes for index.
+* Added example code.
