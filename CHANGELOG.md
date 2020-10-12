@@ -5,3 +5,7 @@
 ## [0.5.2]
 
 * Separated iterable.dart, added related utility methods.
+
+## [0.5.3]
+
+* Bug fixes for index.

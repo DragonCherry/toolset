@@ -31,7 +31,7 @@ extension IterableToolset<T> on Iterable<T> {
     var i = 0;
     final result = <E>[];
     forEach((element) {
-      result.add(f(i, element));
+      result.add(f(i++, element));
     });
     return result;
   }
@@ -39,7 +39,7 @@ extension IterableToolset<T> on Iterable<T> {
   void indexedEach<E>(E f(int i, T e)) {
     var i = 0;
     forEach((element) {
-      f(i, element);
+      f(i++, element);
     });
   }
 
