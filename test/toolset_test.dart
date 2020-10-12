@@ -13,9 +13,17 @@ void testList() {
     ];
 
     final converter = Converter(object);
+
     assert(converter.asList.length == 2, 'asList failed');
+    assert(converter.asString.asList.length == 2, 'asString.asList failed');
     assert(converter.asString.isNotEmpty, 'asString failed');
     assert(converter.asList.isNotEmpty, 'asList.sString failed');
+    assert(
+        Converter(converter.asList.asString.asList.first)
+            .asString
+            .asMap
+            .isNotEmpty,
+        'failed');
     assert(
         converter.asList.enumerated((i, e) {
               return [e];
