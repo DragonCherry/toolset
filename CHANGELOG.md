@@ -1,3 +1,3 @@
-## [0.5.5]
+## [0.5.6]
 
-* Added example code.
+* Fixed example code.
