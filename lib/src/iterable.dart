@@ -68,11 +68,11 @@ extension ListToolset on List<dynamic> {
 
 extension StringToolset on String {
   Map<String, dynamic> get asMap {
-    return jsonEncode(this) as Map<String, dynamic>;
+    return jsonDecode(this) as Map<String, dynamic>;
   }
 
   List<dynamic> get asList {
-    return jsonEncode(this) as List<dynamic>;
+    return jsonDecode(this) as List<dynamic>;
   }
 }
 
