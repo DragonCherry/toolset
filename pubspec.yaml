@@ -1,6 +1,6 @@
 name: toolset
 description: Lightweight extension for basic dart syntax utility including data, string and iterator.
-version: 0.5.2
+version: 0.5.3
 homepage: https://github.com/DragonCherry/toolset
 
 environment:
