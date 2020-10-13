@@ -1,30 +1,4 @@
-import 'dart:convert';
 import 'dart:core';
-
-class Converter<T> {
-  final dynamic object;
-
-  Converter(this.object);
-
-  List<T> get asList {
-    final result = List<T>();
-    final iterator = object as Iterable<T>;
-    if (iterator != null) {
-      iterator.forEach((element) {
-        result.add(element);
-      });
-    }
-    return result;
-  }
-
-  String get asString {
-    return jsonEncode(object);
-  }
-
-  dynamic get asJson {
-    return jsonDecode(object);
-  }
-}
 
 extension IterableToolset<T> on Iterable<T> {
   Iterable<E> enumerated<E>(E f(int i, T e)) {
@@ -36,7 +10,7 @@ extension IterableToolset<T> on Iterable<T> {
     return result;
   }
 
-  void indexedEach<E>(E f(int i, T e)) {
+  void indexedEach(f(int i, T e)) {
     var i = 0;
     forEach((element) {
       f(i++, element);
@@ -51,28 +25,6 @@ extension IterableToolset<T> on Iterable<T> {
       }
     });
     return result;
-  }
-}
-
-extension MapToolset on Map<String, dynamic> {
-  String get asString {
-    return Converter(this).asString;
-  }
-}
-
-extension ListToolset on List<dynamic> {
-  String get asString {
-    return Converter(this).asString;
-  }
-}
-
-extension StringToolset on String {
-  Map<String, dynamic> get asMap {
-    return jsonDecode(this) as Map<String, dynamic>;
-  }
-
-  List<dynamic> get asList {
-    return jsonDecode(this) as List<dynamic>;
   }
 }
 

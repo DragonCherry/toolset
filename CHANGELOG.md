@@ -1,3 +1,3 @@
-## [0.5.6]
+## [0.5.7]
 
-* Fixed example code.
+* Separated files.
